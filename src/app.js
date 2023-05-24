@@ -1,7 +1,7 @@
 import express from "express";
 import morgan from "morgan";
 import bodyParser from "body-parser";
-import privateApi from "./routes/public/routes.js"
+import privateApi from "./routes/private/routes.js"
 import publicApi from "./routes/public/routes.js";
 //Initialization app express
 const app = express();

@@ -13,7 +13,7 @@ const privateApi = {
       const errors = validationResult(req);
       if (!errors.isEmpty()) {
         logger.info(`function::getToken::errors:: ${JSON.stringify(errors)}`);
-        response.error(req, res, 400, 400, "Check body", errors.array());
+        response.error(req, res, 400, 400, null, errors.array());
       } else {
         const token = auth.asignToken({ ...data });
         response.success(req, res, { token: token }, 200, "OK");

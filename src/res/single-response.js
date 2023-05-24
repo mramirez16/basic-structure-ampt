@@ -7,7 +7,7 @@ const headers = {
 };
 const response = {
   success: function (req, res, body, code, msg) {
-    res.status(200).send({
+    res.status(code).send({
       body: {
         ok: true,
         response: body,
@@ -21,7 +21,7 @@ const response = {
   },
 
   error: function (req, res, code, statusCode, msg, validations) {
-    res.status(500).send({
+    res.status(code).send({
       body: {
         ok: false,
         response: null,
